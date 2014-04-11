@@ -1,0 +1,20 @@
+Default: &defaults
+  database: yesoddity.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: yesoddity_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: yesoddity_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: yesoddity_production.sqlite3
+  poolsize: 100
+  <<: *defaults
